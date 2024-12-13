@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node --inspect index.js",
+    "dev": "nodemon --inspect index.js",
+    "lint": "eslint .",
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
   },
   "author": "Matti Luukkainen",
@@ -12,9 +13,15 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@stylistic/eslint-plugin-js": "^2.11.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
     "nodemon": "^3.1.7"
   }
 }
